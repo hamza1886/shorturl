@@ -7,7 +7,7 @@
  */
 
 /**
- * ShortURL: Bijective conversion between natural numbers (IDs) and short strings
+ * ShortURL: Bijective conversion between natural numbers (IDs) and short strings.
  *
  * ShortURL::encode() takes an ID and turns it into a short string
  * ShortURL::decode() takes a short string and turns it into an ID
@@ -33,8 +33,8 @@ class ShortURL
         $str = '';
 
         while ($num > 0) {
-            $str = self::ALPHABET[($num % self::BASE)] . $str;
-            $num = (int)($num / self::BASE);
+            $str = self::ALPHABET[($num % self::BASE)].$str;
+            $num = (int) ($num / self::BASE);
         }
 
         return $str;
@@ -51,5 +51,4 @@ class ShortURL
 
         return $num;
     }
-
 }
